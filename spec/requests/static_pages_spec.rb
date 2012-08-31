@@ -44,11 +44,5 @@ describe "Static pages" do
     end
   end
 
-  describe "Non-existent action/page" do
-    it "should have the h1 'Non-Existent'" do
-      visit "/static_pages/non_exist"
-      page.should have_selector('h1', :text => 'Non')
-    end
-  end
 end
 
