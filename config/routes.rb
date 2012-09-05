@@ -1,9 +1,19 @@
 SampleApp25::Application.routes.draw do
+  controller :dogs do
+    match 'login'  => :login_create,  :via => :post
+    match 'login'  => :login,         :via => :get 
+    match 'logout' => :logout
+  end
+
+  get 'users/new' 
+
   root to: 'static_pages#home'
 
   match "/help",      to: 'static_pages#help'
   match "/about",     to: 'static_pages#about'
   match "/contact",   to: 'static_pages#contact'
+
+  match '/signup',    to: 'users#new'
   
 
   # The priority is based upon order of creation:
