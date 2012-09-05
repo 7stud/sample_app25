@@ -1,10 +1,4 @@
 SampleApp25::Application.routes.draw do
-  controller :dogs do
-    match 'login'  => :login_create,  :via => :post
-    match 'login'  => :login,         :via => :get 
-    match 'logout' => :logout
-  end
-
   get 'users/new' 
 
   root to: 'static_pages#home'
